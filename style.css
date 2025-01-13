@@ -1,0 +1,212 @@
+/* h1{
+color: purple;
+background-color: yellow;
+} */
+.Classtitle{
+    color: red;
+    background-color: greenyellow;
+}
+#IDtitle{
+    color: blue;
+    background-color: cyan;
+}
+h1#another-h1{
+    color: rgb(220, 178, 220);
+    background-color: rgb(137, 137, 127);
+    }
+h1.another-h1{
+        color: rgb(220, 6, 220);
+        background-color: rgb(123, 123, 6);
+        }
+div > h1 {
+    color: green;
+    background-color: wheat;
+    }
+    input[type = "text"]{
+        border: 2px solid red;
+    }
+    input[type = "password"]{
+        border: 5px solid yellow;
+    }
+    h4{
+        color: yellowgreen;
+        background-color: whitesmoke;
+        }
+    h5{
+        color: #0011df;
+        background-color: #ff0000;
+        }
+    /*h6{
+        color: rgb(123, 123, 6);
+        background-color:rgb(220, 178, 22) ;
+        }
+    h6{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13pt;
+        font-weight: bold;
+        font-variant: small-caps;
+        font-style: italic;
+    }*/
+    h1{
+        color:violet;
+        text-decoration: underline;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 5px 3px 2px grey;
+        text-indent: 3cm;
+        direction: ltr;
+    }
+    .content{
+        background-color: violet;
+        height: 600px;
+        width: 600px;
+
+    }
+    .content2{
+        background-image: url(hsoub-academy.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 1000px;
+        width: 900px;
+    }
+    a:link{
+        color:orangered;
+        text-decoration: underline;
+        background-color: papayawhip;
+    }
+    a:visited {
+        color: purple;
+        text-decoration: underline;
+    }
+    a:hover{
+        color: palegoldenrod;
+        text-decoration: underline;
+        background-color: plum;
+    }
+    a:active{
+        color: coral;
+    }
+    .content3{
+        border: 2px solid blue; /* border */
+        color: cornflowerblue; /* content color */
+        margin: 20px; /* margin */
+        padding: 10px;}     /* padding */ 
+    .content4{
+        width: 200px;
+        height: 200px;
+        background-color: darkmagenta;
+        margin-right: 20px;
+        margin-left: 40px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        padding: 40px;
+    }
+    .first{
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+    }
+    .last{
+        width: 200px;
+        height: 200px;
+        background-color: indianred;
+    }
+    ol{list-style-type: upper-alpha;}
+   /*ul{list-style-type: square;}*/
+    table td, th{
+        border: 1px solid gray;
+        padding: 15px;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    th{
+        background-color: lightcyan;
+        color: mediumpurple;
+    }
+    form{
+        background-color: rgb(214, 221, 235);
+        padding: 20px;
+        width: 200px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 35px;
+        margin: 20px;
+        border: 1px solid rgb(167, 167, 167);
+        border-radius: 15px;
+    }
+    label{
+        color: rgb(114,113,113);
+    }
+    input[type="text"], input[type = "password"]{
+        border: 1px solid rgb(163, 163, 163);
+        border-radius: 5px;
+        height: 35px;
+        width: 100%;
+    }
+    input[type= "submit"]{
+        height: 35px;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgb(24, 135, 209);
+        border: 1px solid rgb(98, 106, 175);
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    .post{
+        display: inline-block;
+        height: 160px;
+        width: 160px;
+        border: 1px solid gray;
+        background-color: lavender;
+    }
+  /*  .post:last-child{
+        position: relative;
+        left: 40px;
+        top: 50px;
+    }*/
+    /*.post:last-child{
+        position: absolute;
+        left: 40px;
+        top: 50px;
+    }*/
+    /*.post:last-child{
+        position: fixed;
+        left: 40px;
+        top: 50px;
+    }*/
+    #content{
+        height: 900px;
+    }
+    .container > div {
+        background-color: #49927a;
+        width: 400px;
+        margin: 20px;
+        font-size: 40px;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .content5{
+        background-color: indianred;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+        /*  display: none; /* لإخفاء العناصر */
+       /* display: inline; /* لعرض العناصر جنبًأ إلى جنب + تتجاهل مقاسات العناصر المذكورة*/
+        display: inline-block; /* لعرض العناصر جنبًأ إلى جنب + تأخذ في الاعتبار مقاسات العناصر المذكورة*/
+
+    }
+    nav{
+        float: left;
+        width: 200px;
+    }
+    @font-face {
+       font-family: cairoFont;
+       src: url(fonts/Cairo/static/Cairo-Bold.ttf);
+    }
+    h6{
+       font-family: cairoFont;
+       color: purple;
+    }

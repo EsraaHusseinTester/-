@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test JS</title>
+    <!-- <script>
+        alert("welcome")
+    </script> -->
+</head>
+<body >
+    <!-- هنا طريقة كتابة تانية داخل البودي
+onload="alert('welcome');" -->
+    <!-- <h1 id="title"> Original Title</h1> -->
+
+    <form action="">
+        <label for="txtName"> Enter Your Name: </label>
+        <input type="text" name="txtName" id="txtName">
+        <input type="button" onclick="sayHello()" value="Click here">
+    </form>
+    <h1 id="h1id"></h1>
+    <p class="content"></p>
+    <p class="description"></p>
+    
+    
+    <div id="divContent"></div>
+
+    <input type="button"
+    value="Click here"
+    onclick="alert('button Clicked')">
+    <br>
+
+    <input type= "text" id= "txt1" onfocus= "changeStyle()">
+
+    <h2 id="h2ID"> This is h2 title</h2>
+    
+    <h3> Subscription Form:</h3>
+        <form onsubmit="return validate();">
+            <table>
+                <tr>
+                    <td>
+                        <label for="age">Age:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="age"> <br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="agree">
+                        <label for="agree"> I agree to the terms and conditions</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" value="Register">
+                    </td>
+                    <td>
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    <script src="scripts.js"></script>  
+</body>
+</html>

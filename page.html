@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> This is my first HTML page</title>
+    </head>
+    <body>
+        <h1> This is a heading 1 </h1>
+        <p> This is a paragraph </p>
+        <b> This is a bold text </b>
+        <u> This is an underlined text </u>
+        <i> This is an italic text </i>
+        <s> This is a strike text </s>
+        <sup> This is a supersctipt text </sup>
+        <sub> This is a subsctipt text </sub>
+        <small> This is a small text </small>
+        <big> This is a big text </big>
+        <h2> This is a heading 2 </h2>
+        <h3> This is a heading 3 </h3>
+        <h4> This is a heading 4 </h4>
+        <h5> This is a heading 5 </h5>
+        <h6> This is a heading 6 </h6>
+        <p> This is the first line <br>
+            This is the second line <br>
+            <hr> 
+            And this is another line after the HR (Horisontal Rule)
+        </p>
+        <p> This is a paragraph 
+            <span style="color: blueviolet;">
+                 This contains a specific information
+            </span>
+            <div style="color: darkblue;">
+                and this is another text
+            </div>
+        </p>
+        <p>
+           <p> Isaac Asimov:</p>  
+           <blockquote> I do not fear computers. I fear lack of them. </blockquote>
+           <q>Physics is the universe's operating system.</q>
+           <p> - Steven R. Garman</p>
+           <cite>And then there were none, Agatha Christie </cite>
+        </p>
+        <address>45, Avenue Louise, Bruxelles </address>
+        <p>
+            Press <kbd>ctrl</kbd> + <kbd>s</kbd> to save document.</p>
+            <strong>This information is very sensitive! </strong>
+            <p> <mark> Highlighted text </mark></p>
+            <p> <abbr title="World wide web">web</abbr></p>
+            <p><em>Focus </em>on your goal!</p>
+            <img src="hsoub-academy.jpg" alt="hsoub-academy image">
+            <img src="images/hsoub-academy.jpg" alt="hsoub-academy image">
+            <h1>OWASP Top 10 security risks & vulnerabilities</h1>
+            <ol start="10" type="i">
+                <li>injection</li>
+                <li>broken authentcation</li>
+                <li>sensetive data exposure</li>
+                <li>XML External Entities</li>
+                <li>Broken access control</li>
+                <li>Security Misconfigurations</li>
+                <li>Cross Site Scriptig (XSS)</li>
+                <li>insecure Deserialization</li>
+                <li>using components with known vulnerabilities </li>
+                <li>insufficient logging and monitoring</li>
+            </ol>
+            <h1>strong genres</h1>
+            <ul  type="circle">
+            <li>fantasy</li>
+            <li>Adventure</li>
+            <li>Mystery</li>
+            <li>Horror</li>
+            </ul>
+            <h2> Book Details </h2>
+            <dl>
+                <dt> Book Title: </dt>
+                <dd> Programming with C# </dd>
+                <dt> Book Price: </dt>
+                <dd> 30$ </dd>
+            </dl>
+            <h3> Basic Dictionary: </h3>
+            <table border="1">
+                <tr>
+                    <th>English word</th>
+                    <th>Trans in F</th>
+                    <th>Trans in AR</th>
+                </tr>
+                <tr>
+                    <td>Programming</td>
+                    <td>Programmation</td>
+                    <td>برمجة</td>
+                </tr>
+                <tr>
+                    <td>Programming Lang</td>
+                    <td>Langage de Programmation</td>
+                    <td>لغة برمجة</td>
+                </tr>
+                <tr>
+                    <td>Program</td>
+                    <td>Programe</td>
+                    <td>برنامج</td>
+                </tr>
+            </table>
+            <table border="1">
+                <caption> some world capital cities</caption>
+                <thead>
+                    <tr>
+                        <th> country</th>
+                        <th> capital city</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Morocco</td>
+                        <td> Rabat</td>
+                    </tr>
+                    <tr>
+                        <td> Egypt</td>
+                        <td> Cairo</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"> See more here.. </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table border="1">
+                <caption>
+                    See more cities:
+                </caption>
+                <thead>
+                    <tr>
+                        <th>country</th>
+                        <th> capital city</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Morocco</td>
+                        <td> Casablanca</td>
+                    </tr>
+                    <tr>
+                        <td> Tanger</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr> 
+                        <td colspan="2"> See more here..</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <a href="https://academy.hsoub.com/">
+                Click here to open hsoub academy website
+            </a> <br>
+            <a href="file:///C:/Users/legion/Downloads/%D9%85%D9%86%D8%B5%D8%A9%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84.pdf">
+                Download this file
+            </a> <br>
+            <div style="height: 600px;">
+                <a href="#description">
+                    View product description
+                </a>
+            </div>
+            <p id="description" style="height: 400px;">
+                 This is the description of the selected product
+            </p>
+            <form>
+                <label for="userName"> User Name: </label>
+                <input type="text" id="userName" name="userName"> <br>
+
+                <label for="pwd">Password:</label>
+                <input type="password" name="pwd" id="pwd"> <br>
+
+                <input type="submit" value="Log In">
+            </form>
+
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="userName"> User Name: </label>
+                        </td>
+                        <td>
+                            <input type="text" id="userName" name="userName"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pwd">Password:</label>
+                        </td>
+                        <td>
+                            <input type="password" name="pwd" id="pwd"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Log In">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <h3>
+                Click the play button to listen to the sound 
+            </h3>
+            <audio id="sea_audio" controls>
+                <source src="sea-sound.mp3" type="audio/mp3">
+            </audio> <br>
+
+            <video width="640" height="480" controls>
+                <source src="ocean-sounds.mp4" type="video/mp4">
+                Your browser does not support the video tag.    
+            </video> <br>
+            <header>
+                This is the header of the page
+            </header>
+            <nav>
+                This is the Navbar
+            </nav>
+            <article>
+                <h1> Article title</h1>
+                <section>
+                    Article content section
+                </section>
+                <aside>
+                    Article sidebar
+                </aside>
+            </article>
+            <footer>
+                This is the footer of the page
+            </footer>
+        </body>
+</html>

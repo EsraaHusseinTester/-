@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+    <script>
+        // jQuery(document).ready(function(){
+        //$(document).ready(function(){
+        $(function(){
+            //$('a').text("wiki Hsoub")
+            //.attr('href', 'https://wiki.hsoub.com/');
+            //$('h1:last').addClass('titleStyle');
+            //$('input[type=text]').val("hsoub academy");
+            //$('input[name!=textName]').val("30");
+            //$('input:button').val("Login");
+            // $('p').parent().css('backgroundColor', 'orange');
+            // $('#content').children().css('color', 'blue');
+            $('#content').children('p').css('color', 'blue');
+
+            //$('#content').append('<h5> This is a title5</h5>'); 
+            $('<h5> This is a title5</h5>').appendTo('#content');
+            //$('#content').prepend('<h6> This is a title6</h6>');
+            $('<h6> This is a title6</h6>').prependTo('#content');
+
+            $('#content').after('<h3> This is a title3</h3>');
+            $('#content').before('<h4> This is a title4</h4>');
+            // $('#content').remove();
+            
+            $('#content').click(function(){
+                alert("you clicked on the content");
+            });
+    
+            $('#textName1').focus(function(){
+                $('this').addClass('inputStule');
+            })
+
+            $('#selectBtn').click(function(){
+                $('input:checkbox').attr('checked', 'checked');
+                $('#selectBtn').attr('disabled','disabled');
+            });
+            $('#DeselectBtn').click(function(){
+                $('input:checkbox').removeAttr('checked');
+                $('#selectBtn').removeAttr('disabled')
+            });
+            $('#languages').change(function(){
+                alert($('#languages').val());
+            });
+            $(function(){
+                $('#goBottom').click(function(){
+                 $('html, body').animate({scrollTop: $(document).height()},1200);   
+                return false;
+                });
+                $('#goTop').click(function(){
+                 $('html, body').animate({scrollTop: 0},1200);   
+                return false;
+                });
+                //$(document).contextmenu(function(){
+                //    return false;
+               //  });
+            });
+            //$('#show').click(function(){
+            //    $('#contentId').show();
+           //});
+           // $('#hide').click(function(){
+           //     $('#contentId').hide();
+           // });
+           //ممكن نستخدم عنصر واحداسمه توجل لعمل الأمرين بزر واحد
+            $('#toggle').click(function(){
+                $('#contentId').toggle(1000);
+            });
+            $('#slideToggle').click(function(){
+                $('#contentId').slideToggle(1000);
+            });
+            $('#myForm').validate({
+                rules: {
+                    userName: {
+                        required: true
+                    },
+                    mail: {
+                        required: true,
+                        mail: true
+                    },
+                    agree: {
+                        required: true
+                    },
+                }
+            });
+        $('#load').click(function(){
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/todos',
+                type: 'GET',
+                dataType: "json",
+                success: function(data, status){
+                    //console.log(status); // يعرض حالة الاستجابة
+                    //console.log(data); // يعرض البيانات
+                    var todos = '';
+                    $.each(data,function(key,value){
+                    todos += '<tr>';
+                    todos += '<td>' + value.id + '</td>';
+                    todos += '<td>' + value.userId + '</td>';
+                    todos += '<td>' + value.title + '</td>';
+                    todos += '<td>' + value.Completed + '</td>';
+                    todos += '</tr>';
+                    });
+                    $('#todos').append(todos);
+                },
+                error: function(result, status, error){
+                    console.log("cannot load data"); // رسالة الخطأ
+                },
+                complete: function(result, status){
+                    console.log("loading completed");  // رسالة عند اكتمال العملية
+                }
+            });
+        });
+        
+        });
+    </script>
+    <style>
+        .titleStyle{
+            color: orangered;
+            text-decoration: underline;
+        }
+        .inputStule{
+            background-color: peru;
+            border: 1px solid green;
+        }
+        div{
+            height: 400px;
+        }
+        #contentId{
+            height: 200px;
+            width: 200px;
+            background-color: blueviolet;
+        }
+        .error{
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body >
+<a></a>
+<h1>This is the 1st title</h1>
+<h1>This is the last title</h1>
+<form action="">
+    <input type="text" name="textName">
+    <input type="text" name="textAge">
+    <input type="button" >
+</form>
+<div id="content" >
+    <h4> This is a title</h4>
+    <p>
+        This is a paragraph
+    </p>
+</div>
+
+<form>
+    <input type="text" name="textName1">
+    <input type="text" name="textAge1">
+    <input type="button" >
+</form>
+
+<form>
+    <input id="html" value="" type="checkbox">
+    <label for="html">html</label><br>
+
+    <input id="css" value="" type="checkbox">
+    <label for="css">css</label><br>
+
+    <input id="javascript" value="" type="checkbox">
+    <label for="javascript">javascript</label><br>
+
+    <input id="jQuery" value="" type="checkbox">
+    <label for="jQuery">jQuery</label><br>
+    <hr>
+    <select name="languages" id="languages">
+        <option value="java">java</option>
+        <option value="cs">C#</option>
+        <option value="php">PHP</option>
+        <option value="vb">Visual Basic</option>
+    </select>
+    <br><br>
+    <input type="button" id="selectBtn" value="Select All">
+    <input type="button" id="DeselectBtn" value="Deselect All">
+</form>
+<div id="bottom">
+    <a href="#" id="goBottom"> Go to the bottom</a>
+</div>
+<div id="top">
+    <a href="#" id="goTop"> Go to the top</a>
+</div>
+<div id="contentId"></div>
+<!-- <button id="show"> Show</button>
+<button id="hide"> Hide</button> -->
+<button id="toggle"> Toggle</button>
+<button id="slideToggle"> slide up/ slide down</button>
+
+<h1>subscription form:</h1>
+<form id="myForm">
+    <table>
+        <tr>
+            <td>
+                <label for="userName"> User Name: </label>
+            </td>
+            <td>
+                <input type="text" id="userName" name="userName"> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email</label>
+            </td>
+            <td>
+                <input type="text" id="mail" name="mail"> <br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="checkbox" id="agree" name="agree">
+                <label for="agree">i agree with terms & conditions</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="regiter">
+            </td>
+            <td>
+                <input type="reset" value="clear">
+            </td>
+        </tr>
+    </table>
+</form>
+<button id="load"> load data</button>
+<table border="1" id="todos">
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th> userId</th>
+            <th> Title</th>
+            <th> Id</th>
+            <th> Completed</th>
+        </tr>
+    </thead>
+
+</table>
+
+
+
+<script src="scripts.js"></script>
+</body>
+</html>
